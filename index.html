@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simpleBank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: sira-pro;
+            src: url(./webFonts/Fontspring-DEMO-ceraroundpro-medium.otf);
+        }
+        
+        h2 {
+            font-family: sira-pro;
+        }
+        
+        input {
+            font-family: "roboto";
+        }
+        
+         ::placeholder {
+            color: #fff !important;
+        }
+    </style>
+    <!-- tailwind config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {},
+                },
+            },
+        };
+    </script>
+    <section class="bg-neutral-50">
+        <div class="container p-5">
+            <div class="grid place-items-center min-h-screen">
+                <div class="border border-indigo-400 rounded-md text-gray-800 p-4 shadow-2xl font-black text-center">
+                    <h2 class="text-4xl font-bold">
+                        Hey Buddy, <br /> Welcome To your
+                        <span class="text-indigo-600">Baaap Er Bank</span>
+                    </h2>
+                    <img class="md:max-w-[40%] mx-auto" src="./images/login.webp" alt="" />
+                    <form action="#" id="loginForm" class="p-5">
+                        <p>
+                            email:my@bank.com <br /> password: 1234
+                        </p>
+                        <input type="email" id="email" class="bg-indigo-600 p-3 rounded m-3 shadow" placeholder="Enter Your Email" />
+                        <input type="password" id="password" class="bg-indigo-600 p-3 rounded m-3 shadow" placeholder="Please Enter Your Password" />
+                        <br />
+                        <button type="submit" class="bg-yellow-500 px-10 py-3 rounded-md font-bold text-white m-3">
+                Login
+              </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
