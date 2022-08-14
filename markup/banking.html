@@ -19,18 +19,50 @@
             },
         };
     </script>
-    <div class="container p-5">
+    <div class="md:w-3/4 mx-auto p-5 my-20">
         <div class="row">
-            <div class="mt-[10vh]">
-                <img class="md:max-w-[40%] mx-auto" src="../images/underDevelopment.webp" alt="" />
-                <div class="p-4 mt-6 shadow-xl rounded bg-yellow-400 text-gray-800 grid place-items-center">
-                    <h2 class="sm:text-[70px] text-[30px] font-black text-center">
-                        This Page is under development
-                    </h2>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 text-center">
+                <div class="p-4 rounded-xl bg-indigo-600 text-white font-bold text-4xl shadow-lg text-left">
+                    <h2>Totall Deposit</h2>
+                    <h1 class="text-yellow-500">
+                        $ <span id="dipositAmount">00</span>
+                    </h1>
+                </div>
+                <div class="p-4 rounded-xl bg-indigo-400 text-white font-bold text-4xl shadow-lg text-left">
+                    <h2>Withdraw</h2>
+                    <h1 class="text-yellow-500">
+                        $ <span id="withdrawAmount">00</span>
+                    </h1>
+                </div>
+                <div class="p-4 rounded-xl bg-indigo-900 text-white font-bold text-4xl shadow-lg text-left">
+                    <h2>Balance</h2>
+                    <h1 class="text-yellow-500">
+                        $ <span id="balanceAmount">1200</span>
+                    </h1>
                 </div>
             </div>
         </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 mt-20">
+            <div class="p-5 rounded shadow-xl bg-indigo-100 text-center">
+                <input type="number" id="depositInput" class="bg-indigo-500 p-3 rounded m-3 shadow text-white block mx-auto" placeholder="Amount To Deposit" />
+                <a id="depositButton" class="bg-yellow-500 px-10 py-3 rounded-md font-bold text-white m-3 mx-auto block max-w-[40%]">Deposit</a
+          >
+        </div>
+        <div class="p-5 rounded shadow-xl bg-indigo-100 text-center">
+          <input
+            type="number"
+            id="withDrawInput"
+            class="bg-indigo-500 p-3 rounded m-3 shadow text-white block mx-auto"
+            placeholder="Amount To Withdraw"
+          />
+          <a
+            id="withdrawButton"
+            class="bg-red-500 px-10 py-3 rounded font-bold text-white m-3 mx-auto block max-w-[40%]"
+            >Withdraw</a
+          >
+        </div>
+      </div>
     </div>
-</body>
-
+    <script src="../js/banking.js"></script>
+  </body>
 </html>
