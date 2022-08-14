@@ -1,14 +1,14 @@
-const form = document.getElementById("loginForm");
+const formSubmit = document.getElementById("formSubmit");
+console.log(formSubmit);
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+formSubmit.addEventListener("click", () => {
     const mail = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    console.log(mail);
-    console.log(password);
+
     if (mail == "my@bank.com" && password == "1234") {
-        window.location.href = "../markup/banking.html";
+        formSubmit.setAttribute("href", "./markup/banking.html");
     } else {
         alert(`wrong login info`);
     }
+    console.log(`clickes`);
 });
