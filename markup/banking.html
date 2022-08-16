@@ -14,55 +14,74 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {},
+                    colors: {
+                        mainBodyBg: "#f6f5fa",
+                        webPrimary: "#1db373",
+                        fontColor: "#04374b",
+                        withdarwColor: "#f37d73",
+                    },
+                    boxShadow: {
+                        primaryShadow: "10px 60px 64px #eaebef, -10px -10px 64px #ffffff;",
+                    },
                 },
             },
         };
     </script>
-    <div class="md:w-3/4 mx-auto p-5 my-20">
+    <div class="md:w-3/4 mx-auto p-5 my-20 bg-mainBodyBody">
         <div class="row">
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 text-center">
-                <div class="p-4 rounded-xl bg-indigo-600 text-white font-bold text-4xl shadow-lg text-left">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 text-center bg-white p-4 rounded shadow-primaryShadow border border-webPrimary">
+                <div class="p-4 rounded bg-webPrimary text-white font-bold sm:text-4xl text-2xl shadow-lg text-left">
                     <h2>Totall Deposit</h2>
-                    <h1 class="text-yellow-500">
-                        $ <span id="dipositAmount">00</span>
-                    </h1>
+                    <h1 class="text-fontColor">$ <span id="dipositAmount">00</span></h1>
                 </div>
-                <div class="p-4 rounded-xl bg-indigo-400 text-white font-bold text-4xl shadow-lg text-left">
+                <div class="p-4 rounded bg-withdarwColor text-fontColor font-bold text-2xl sm:text-4xl shadow-lg text-left">
                     <h2>Withdraw</h2>
-                    <h1 class="text-yellow-500">
-                        $ <span id="withdrawAmount">00</span>
-                    </h1>
+                    <h1 class="text-red-500">$ <span id="withdrawAmount">00</span></h1>
                 </div>
-                <div class="p-4 rounded-xl bg-indigo-900 text-white font-bold text-4xl shadow-lg text-left">
+                <div class="p-4 rounded bg-fontColor text-webPrimary font-bold text-2xl sm:text-4xl shadow-lg text-left">
                     <h2>Balance</h2>
-                    <h1 class="text-yellow-500">
+                    <h1 class="text-green-300">
                         $ <span id="balanceAmount">1200</span>
                     </h1>
                 </div>
             </div>
         </div>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 mt-20">
-            <div class="p-5 rounded shadow-xl bg-indigo-100 text-center">
-                <input type="number" id="depositInput" class="bg-indigo-500 p-3 rounded m-3 shadow text-white block mx-auto" placeholder="Amount To Deposit" />
-                <a id="depositButton" class="bg-yellow-500 px-10 py-3 rounded-md font-bold text-white m-3 mx-auto block max-w-[40%]">Deposit</a
+            <div class="p-5 rounded shadow-xl bg-webPrimary text-center flex flex-col gap-1">
+                <input type="number" id="depositInput" class="block bg-fontColor p-3 rounded m-3 shadow text-white" placeholder="Amount To Deposit" />
+
+                <a id="depositButton" class="bg-green-400 text-fontColor text-center font-black px-10 py-3 rounded-md text-white m-3 cursor-pointer inline-block">Deposit</a
           >
         </div>
-        <div class="p-5 rounded shadow-xl bg-indigo-100 text-center">
+        <div
+          class="p-5 rounded shadow-xl bg-withdarwColor text-center flex flex-col gap-1"
+        >
           <input
             type="number"
             id="withDrawInput"
-            class="bg-indigo-500 p-3 rounded m-3 shadow text-white block mx-auto"
+            class="bg-fontColor p-3 rounded m-3 shadow text-white"
             placeholder="Amount To Withdraw"
           />
           <a
             id="withdrawButton"
-            class="bg-red-500 px-10 py-3 rounded font-bold text-white m-3 mx-auto block max-w-[40%]"
+            class="bg-red-500 px-10 py-3 rounded font-bold text-white m-3 cursor-pointer"
             >Withdraw</a
           >
         </div>
       </div>
     </div>
+    <footer
+      class="text-center py-5 font-semibold bg-fontColor fixed w-full bottom-0"
+    >
+      <div class="container">
+        <a
+          class="text-fontColor p-2 rounded bg-webPrimary opacity-30"
+          href="https://github.com/AriyanShihab"
+          target="_blank"
+          >Ariyan Shihab</a
+        >
+      </div>
+    </footer>
     <script src="../js/banking.js"></script>
   </body>
 </html>

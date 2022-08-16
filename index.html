@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>simpleBank</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -12,7 +16,7 @@
 <body>
     <style>
         * {
-            font-family: "Roboto", sans-serif;
+            font-family: "Poppins", sans-serif;
         }
         
          ::placeholder {
@@ -24,28 +28,37 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {},
+                    colors: {
+                        mainBodyBg: "#f6f5fa",
+                        webPrimary: "#1db373",
+                        fontColor: "#04374b",
+                    },
+                    boxShadow: {
+                        primaryShadow: "10px 60px 64px #eaebef, -10px -10px 64px #ffffff;",
+                    },
                 },
             },
         };
     </script>
-    <section class="bg-neutral-50">
-        <div class="container p-5">
-            <div class="grid place-items-center min-h-screen">
-                <div class="border border-indigo-400 rounded-md text-gray-800 p-4 shadow-2xl font-black text-center">
-                    <h2 class="text-4xl font-bold">
-                        Hey Buddy, <br /> Welcome To your
-                        <span class="text-indigo-600">Baaap Er Bank</span>
-                    </h2>
-                    <img class="md:max-w-[40%] mx-auto" src="./images/login.webp" alt="" />
-                    <form action="#" id="loginForm" class="p-5">
-                        <p>
+    <section class="bg-mainBodyBg">
+        <div class="container p-4 flex min-h-screen items-center">
+            <div class="md:w-3/4 mx-auto p-5">
+                <div class="md:flex md:flex-row-reverse justify-between gap-5 text-fontColor p-4 bg-white text-center shadow-primaryShadow border border-webPrimary rounded-lg min-h-[50vh] mt-10">
+                    <div class="p-2">
+                        <h2 class="sm:text-4xl text-2xl font-bold">
+                            Hey Buddy, <br /> Welcome To your
+                            <span class="text-webPrimary">Baaap Er Bank</span>
+                        </h2>
+                        <img class="md:max-w-[40%] mx-auto" src="./images/login.webp" alt="" />
+                    </div>
+                    <form action="#" id="loginForm" class="p-5 md:min-w-[50%]">
+                        <p class="opacity-50 p-1 border border-webPrimary rounded m-3">
                             email:my@bank.com <br /> password: 1234
                         </p>
-                        <input type="email" id="email" class="bg-indigo-600 p-3 rounded m-3 shadow text-white" placeholder="Enter Your Email" />
-                        <input type="password" id="password" class="bg-indigo-600 p-3 rounded m-3 shadow" placeholder="Please Enter Your Password" />
+                        <input type="email" id="email" class="bg-fontColor max-w-full p-3 rounded m-3 text-white" placeholder="Enter Your Email" />
+                        <input type="password" id="password" class="bg-fontColor max-w-full p-3 rounded m-3 text-white" placeholder="Please Enter Your Password" />
                         <br />
-                        <a id="formSubmit" class="bg-yellow-500 px-10 py-3 rounded-md font-bold text-white m-3 block max-w-[50%] mx-auto">
+                        <a id="formSubmit" class="bg-webPrimary px-10 py-3 rounded-md font-bold text-white text-2xl m-3 block max-w-[50%] mx-auto cursor-pointer">
                 Login
               </a>
                     </form>
@@ -53,7 +66,12 @@
             </div>
         </div>
     </section>
+    <footer class="text-center py-5 font-semibold bg-fontColor fixed w-full bottom-0">
+        <div class="container">
+            <a class="text-fontColor p-2 rounded bg-webPrimary opacity-30" href="https://github.com/AriyanShihab" target="_blank">Ariyan Shihab</a
+        >
+      </div>
+    </footer>
     <script src="./js/login.js"></script>
-</body>
-
+  </body>
 </html>
