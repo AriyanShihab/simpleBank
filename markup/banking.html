@@ -48,7 +48,7 @@
         </div>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 mt-20">
             <div class="p-5 rounded shadow-xl bg-webPrimary text-center flex flex-col gap-1">
-                <input type="number" id="depositInput" class="block bg-fontColor p-3 rounded m-3 shadow text-white" placeholder="Amount To Deposit" />
+                <input min="0" type="number" id="depositInput" class="block bg-fontColor p-3 rounded m-3 shadow text-white" placeholder="Amount To Deposit" />
 
                 <a id="depositButton" class="bg-green-400 text-fontColor text-center font-black px-10 py-3 rounded-md text-white m-3 cursor-pointer inline-block">Deposit</a
           >
@@ -57,6 +57,7 @@
           class="p-5 rounded shadow-xl bg-withdarwColor text-center flex flex-col gap-1"
         >
           <input
+            min="0"
             type="number"
             id="withDrawInput"
             class="bg-fontColor p-3 rounded m-3 shadow text-white"
