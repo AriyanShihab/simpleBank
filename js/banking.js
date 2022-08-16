@@ -12,10 +12,18 @@ dipositButton.addEventListener("click", function() {
         );
         return;
     }
+
     // conver to Number
     const userDeposit = parseFloat(depositInput.value);
     const totallDeposit = parseFloat(dipositAmount.innerText);
     let updateBalance = parseFloat(balanceAmount.innerText);
+    if (userDeposit <= 0) {
+        alert(
+            "vai tumi kan? baap er bank, kintu tk diccho nagitive! kamne ki vai? ekta positive number dao"
+        );
+        depositInput.value = "";
+        return;
+    }
 
     // basic calulation
 
@@ -45,6 +53,13 @@ withdrawButton.addEventListener("click", function() {
     const balanceInNumber = parseFloat(balanceAmount.innerText);
     const totallWithdrawInNumber = parseFloat(totallWithdraw.innerText);
     // calculation;
+    if (withdrawInputAmount <= 0) {
+        alert(
+            "vai tumi kan? baap er bank, kintu tk niccho nagitive! kamne ki vai? ekta positive number dao"
+        );
+        userWithdrawAmount.value = "";
+        return;
+    }
     if (balanceInNumber < withdrawInputAmount) {
         alert("vai ki kortaso tumi? tomar babar bank a ato tk nai");
         userWithdrawAmount.value = "";
